@@ -1,0 +1,209 @@
+{
+    "PROJECT_ID": "cbe96293-f9e5-4d8e-8e33-b92c14a4ea4f",
+    "PROJECT_NAME": "Weather Service Project",
+    "PROJECT_DESCRIPTION": "Develop a comprehensive weather service application with robust backend, user-friendly frontend, data analysis, and mobile support.",
+    "PROJECT_DURATION": "120",
+    "PROJECT_START_DATE": "2024-01-01",
+    "PROJECT_END_DATE": "2024-04-30",
+    "PROJECT_ADJ_END_DATE": "2024-05-02",
+    "PROJECT_COST": 150000,
+    "PROJECT_CRITICAL_PATH_TASKS": ["task_1", "task_3", "task_7", "task_10", "task_13", "task_16"],
+    "PROJECT_SKILLS_REQUIRED": ["ADMIN", "BACKEND", "FRONTEND", "DATA_SCIENCE", "MOBILE", "QA"],
+    "RESOURCE_ALLOCATED": [
+        {"resource_name": "Karan", "resource_id": "1234", "skills": ["BACKEND", "DATA_SCIENCE"]},
+        {"resource_name": "Alice", "resource_id": "1235", "skills": ["FRONTEND"]},
+        {"resource_name": "Bob", "resource_id": "1236", "skills": ["ADMIN", "BACKEND"]},
+        {"resource_name": "Charlie", "resource_id": "1237", "skills": ["MOBILE"]},
+        {"resource_name": "David", "resource_id": "1238", "skills": ["QA"]},
+        {"resource_name": "Eva", "resource_id": "1239", "skills": ["DATA_SCIENCE"]}
+    ],
+    "TASKS": [
+        {
+            "task_id": "task_1",
+            "task_name": "Project Setup",
+            "task_description": "Set up the project repository and initial configuration.",
+            "skill": ["ADMIN"],
+            "completion_percentage": 100,
+            "duration_days": 2,
+            "start_date": "2024-01-01",
+            "end_date": "2024-01-02",
+            "task_dependencies": []
+        },
+        {
+            "task_id": "task_2",
+            "task_name": "Backend Design",
+            "task_description": "Design the architecture for the backend services.",
+            "skill": ["BACKEND"],
+            "completion_percentage": 50,
+            "duration_days": 10,
+            "start_date": "2024-01-03",
+            "end_date": "2024-01-12",
+            "task_dependencies": ["task_1"]
+        },
+        {
+            "task_id": "task_3",
+            "task_name": "Backend Implementation",
+            "task_description": "Implement the backend services in Python.",
+            "skill": ["BACKEND"],
+            "completion_percentage": 25,
+            "duration_days": 20,
+            "start_date": "2024-01-13",
+            "end_date": "2024-02-01",
+            "task_dependencies": ["task_2"]
+        },
+        {
+            "task_id": "task_4",
+            "task_name": "Frontend Design",
+            "task_description": "Design the user interface for the frontend.",
+            "skill": ["FRONTEND"],
+            "completion_percentage": 75,
+            "duration_days": 10,
+            "start_date": "2024-01-03",
+            "end_date": "2024-01-12",
+            "task_dependencies": ["task_1"]
+        },
+        {
+            "task_id": "task_5",
+            "task_name": "Frontend Implementation",
+            "task_description": "Implement the frontend using React.",
+            "skill": ["FRONTEND"],
+            "completion_percentage": 0,
+            "duration_days": 20,
+            "start_date": "2024-01-13",
+            "end_date": "2024-02-01",
+            "task_dependencies": ["task_4"]
+        },
+        {
+            "task_id": "task_6",
+            "task_name": "Data Collection Design",
+            "task_description": "Design the data collection architecture for weather data.",
+            "skill": ["DATA_SCIENCE"],
+            "completion_percentage": 50,
+            "duration_days": 10,
+            "start_date": "2024-01-03",
+            "end_date": "2024-01-12",
+            "task_dependencies": ["task_1"]
+        },
+        {
+            "task_id": "task_7",
+            "task_name": "Data Collection Implementation",
+            "task_description": "Implement the data collection system.",
+            "skill": ["DATA_SCIENCE"],
+            "completion_percentage": 0,
+            "duration_days": 20,
+            "start_date": "2024-01-13",
+            "end_date": "2024-02-01",
+            "task_dependencies": ["task_6"]
+        },
+        {
+            "task_id": "task_8",
+            "task_name": "Mobile App Design",
+            "task_description": "Design the mobile application interface.",
+            "skill": ["MOBILE"],
+            "completion_percentage": 0,
+            "duration_days": 10,
+            "start_date": "2024-01-03",
+            "end_date": "2024-01-12",
+            "task_dependencies": ["task_1"]
+        },
+        {
+            "task_id": "task_9",
+            "task_name": "Mobile App Implementation",
+            "task_description": "Implement the mobile application.",
+            "skill": ["MOBILE"],
+            "completion_percentage": 0,
+            "duration_days": 30,
+            "start_date": "2024-01-13",
+            "end_date": "2024-02-11",
+            "task_dependencies": ["task_8"]
+        },
+        {
+            "task_id": "task_10",
+            "task_name": "Integration Testing",
+            "task_description": "Perform integration testing of backend, frontend, and data collection systems.",
+            "skill": ["BACKEND", "FRONTEND", "DATA_SCIENCE"],
+            "completion_percentage": 0,
+            "duration_days": 10,
+            "start_date": "2024-02-02",
+            "end_date": "2024-02-11",
+            "task_dependencies": ["task_3", "task_5", "task_7"]
+        },
+        {
+            "task_id": "task_11",
+            "task_name": "Frontend QA Testing",
+            "task_description": "Perform QA testing on the frontend.",
+            "skill": ["QA"],
+            "completion_percentage": 0,
+            "duration_days": 5,
+            "start_date": "2024-02-12",
+            "end_date": "2024-02-16",
+            "task_dependencies": ["task_10"]
+        },
+        {
+            "task_id": "task_12",
+            "task_name": "Backend QA Testing",
+            "task_description": "Perform QA testing on the backend.",
+            "skill": ["QA"],
+            "completion_percentage": 0,
+            "duration_days": 5,
+            "start_date": "2024-02-12",
+            "end_date": "2024-02-16",
+            "task_dependencies": ["task_10"]
+        },
+        {
+            "task_id": "task_13",
+            "task_name": "Mobile App QA Testing",
+            "task_description": "Perform QA testing on the mobile app.",
+            "skill": ["QA"],
+            "completion_percentage": 0,
+            "duration_days": 5,
+            "start_date": "2024-02-12",
+            "end_date": "2024-02-16",
+            "task_dependencies": ["task_9"]
+        },
+        {
+            "task_id": "task_14",
+            "task_name": "Frontend Deployment",
+            "task_description": "Deploy the frontend to the production environment.",
+            "skill": ["ADMIN"],
+            "completion_percentage": 0,
+            "duration_days": 3,
+            "start_date": "2024-02-17",
+            "end_date": "2024-02-19",
+            "task_dependencies": ["task_11"]
+        },
+        {
+            "task_id": "task_15",
+            "task_name": "Backend Deployment",
+            "task_description": "Deploy the backend to the production environment.",
+            "skill": ["ADMIN"],
+            "completion_percentage": 0,
+            "duration_days": 3,
+            "start_date": "2024-02-17",
+            "end_date": "2024-02-19",
+            "task_dependencies": ["task_12"]
+        },
+        {
+            "task_id": "task_16",
+            "task_name": "Mobile App Deployment",
+            "task_description": "Deploy the mobile app to the app stores.",
+            "skill": ["ADMIN"],
+            "completion_percentage": 0,
+            "duration_days": 3,
+            "start_date": "2024-02-17",
+            "end_date": "2024-02-19",
+            "task_dependencies": ["task_13"]
+        },
+        {
+            "task_id": "task_17",
+            "task_name": "Final Review and Documentation",
+            "task_description": "Perform final project review and documentation.",
+            "skill": ["ADMIN"],
+            "completion_percentage": 0,
+            "duration_days": 5,
+            "start_date": "2024-02-20",
+            "end_date": "2024-02-24",
+            "task_dependencies": ["task_14", "task_15", "task_16"]
+        }
+    ]
+}
