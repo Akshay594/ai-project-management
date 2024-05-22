@@ -1,0 +1,20 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title Project Management Application
+
+Person(user, "User", "Interacts with the application")
+
+System_Boundary(system, "Project Management Application") {
+    Container(app, "Application", "Python", "Handles user requests and generates responses")
+    ContainerDb(sample_data, "Sample Data", "JSON", "Stores project and task information")
+    Container(openai_api, "OpenAI API", "REST", "Provides language model and function calling capabilities")
+    Container(question_generator, "OpenAI Question Generator", "Python", "Generates sub-questions related to user queries")
+}
+
+Rel(user, app, "Sends requests and receives responses")
+Rel(app, sample_data, "Reads and updates project data")
+Rel(app, openai_api, "Sends requests and receives responses")
+Rel(app, question_generator, "Generates sub-questions")
+
+@enduml
