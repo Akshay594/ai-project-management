@@ -1,5 +1,4 @@
 from fastapi import FastAPI, HTTPException, File, UploadFile, Form
-from pydantic import BaseModel
 from typing import List, Dict, Any
 from fastapi.middleware.cors import CORSMiddleware
 from llama_index.question_gen.openai import OpenAIQuestionGenerator
@@ -24,9 +23,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-class UserRequest(BaseModel):
-    user_request: str
 
 conversation_history: List[Dict[str, Any]] = []
 
@@ -55,6 +51,11 @@ async def process_request(user_request: str = Form(...), file: UploadFile = File
     7. If the user's request doesn't match any of the above scenarios, provide a relevant response based on the conversation context.
 
     Select the appropriate function based on the user's request and input data. Provide specific and detailed information in the response.
+
+    Conversation History:
+    {conversation_history}
+
+    User Request: {user_request}
     """
 
     response = chat_completion_request(
@@ -142,6 +143,3 @@ async def process_request(user_request: str = Form(...), file: UploadFile = File
     conversation_history.append({"user": user_request, "assistant": result})
 
     return {"result": result, "sub_questions": sub_questions, "conversation_history": conversation_history}
-
-# You can now run this FastAPI app with uvicorn
-# Example: uvicorn my_fastapi_app:app --reload
